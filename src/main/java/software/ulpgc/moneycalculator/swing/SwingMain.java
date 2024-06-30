@@ -24,7 +24,7 @@ public class SwingMain extends JFrame {
                 main.currencyDialog().define(currencies),
                 new MockExchangeRateLoader(),
                 main.moneyDisplay());
-        main.add("exchange money", command);
+        main.add(command);
         main.setVisible(true);
     }
 
@@ -64,8 +64,8 @@ public class SwingMain extends JFrame {
         return dialog;
     }
 
-    private void add(String name, Command command) {
-        commands.put(name, command);
+    private void add(Command command) {
+        commands.put("exchange money", command);
     }
 
     private MoneyDisplay moneyDisplay() {
